@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Последнее сообщение Telegram</title>
+</head>
+<body>
+  <h1>Последнее сообщение Telegram</h1>
+
+  <button onclick="loadMessage()">Загрузить сообщение</button>
+  <div id="message">Нажмите кнопку, чтобы загрузить сообщение.</div>
+
+  <script>
+    function loadMessage() {
+      fetch('http://localhost:5000/getUpdates')
+        .then(response => response.json())
+        .then(handleResponse)
+        .catch(error => {
+          document.getElementById('message').textContent = 'Ошибка запроса: ' + error;
+        });
+    }
+
+    function handleResponse(response) {
+      const updates = response.result;
+      if (updates.length > 0) {
+        const lastUpdate = updates[updates.length - 1];
+        const messageText = lastUpdate.message.text;
+        const senderName = lastUpdate.message.from.first_name;
+        document.getElementById('message').innerHTML =
+          `Последнее сообщение в боте:
+           от ${senderName}: "${messageText}"`;
+      } else {
+        document.getElementById('message').textContent = 'Нет сообщений.';
+      }
+    }
+  </script>
+</body>
+</html>
