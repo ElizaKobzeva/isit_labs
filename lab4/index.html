@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <title>test_Liza</title>
+
+    <style>
+        /*предпочитаю в отдельных файлах, но для лр сойдет*/
+        #form {
+            display: none;
+            width: 50%;
+            min-height: 400px;
+            border-radius: 20px;
+            border: 3px solid lightblue;
+            margin: 0 auto;
+        }
+
+        .form>* {
+            display: block;
+            margin: 30px auto;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .form>input {
+            border: 3px solid blue;
+            border-radius: 16px;
+        }
+
+        .buttonBlue {
+            width: 300px;
+            min-height: 60px;
+            background-color: rgb(37, 115, 241);
+            color: white;
+            font-size: 30px;
+            border-radius: 16px;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1> VK API !</h1>
+
+    <div class="form" id="form">
+        <p>Введите ID пользователя:</p>
+        <input type="text" id="owner_id">
+        <br>
+
+        <p>Введите ID поста:</p>
+        <input type="text" id="post_id">
+
+        <p>Введите комментарий (необязательно для лайка):</p>
+        <input type="text" id="comment">
+
+        <button class="buttonBlue" id="likePost" onclick="set_like()">Поставить лайк!</button>
+        <button class="buttonBlue" id="commentPost" onclick="set_comment()">написать комментарий!</button>
+    </div>
+
+    <br>
+
+
+
+    <script src="https://unpkg.com/@vkid/sdk@<3.0.0/dist-sdk/umd/index.js"></script> <!-- for VK -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
