@@ -1,0 +1,56 @@
+<root>
+  <catalog>
+    <head>Зарубнжная литература</head>
+    <book>
+      <title>Дюна</title>
+      <author>Фрэнк Герберт</author>
+      <year>1965</year>
+      <janre>Научная фантастика</janre>
+    </book>
+    <book>
+      <title>Нейромант</title>
+      <author>Уильям Гибсон</author>
+      <year>1984</year>
+      <janre>Киберпанк</janre>
+    </book>
+    <book>
+      <title>Шурлок Холмс</title>
+      <author>Артур Конан-Дойл</author>
+      <year>1870</year>
+      <janre>Детектив</janre>
+    </book>
+    <book>
+      <title>Три товарища</title>
+      <author>Эрих Ремарк</author>
+      <year>1935</year>
+      <janre>Драма</janre>
+    </book>
+  </catalog>
+  <catalog>
+    <head>Русская литература</head>
+    <book>
+      <title>Преступление и наказание</title>
+      <author>Фёдор Достоевский</author>
+      <year>1866</year>
+      <janre>Роман</janre>
+    </book>
+    <book>
+      <title>Война и мир</title>
+      <author>Лев Толстой</author>
+      <year>1869</year>
+      <janre>Исторический роман</janre>
+    </book>
+    <book>
+      <title>Евгений Онегин</title>
+      <author>Александр Пушкин</author>
+      <year>1830</year>
+      <janre>Роман в стихах</janre>
+    </book>
+    <book>
+      <title>Мастер и Маргарита</title>
+      <author>Михаил Булгаков</author>
+      <year>1967</year>
+      <janre>Мистика</janre>
+    </book>
+  </catalog>
+</root>
